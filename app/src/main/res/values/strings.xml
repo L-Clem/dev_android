@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DevAndroid</string>
+    <string name="btn_info">Info</string>
+    <string name="btn_produits">Produits</string>
+
+
+    <string name="txt_epsi">EPSI</string>
+
+    <string name="txt_info">Infos</string>
+    <string name="txt_produits">Rayons</string>
 </resources>
