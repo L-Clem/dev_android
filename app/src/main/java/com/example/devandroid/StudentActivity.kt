@@ -20,10 +20,10 @@ class StudentActivity : BaseActivity() {
 
         var Students : JSONObject = JSONObject(loadJSONFromAsset(this))
 
-
         val Student = Students.getJSONObject(intent.extras?.getString("student"))
 
         setHeaderTitle(Student.get("lastName").toString())
+
         val names = StringBuilder()
         names.append(Student.get("firstName")).append(" ").append(Student.get("lastName"))
 

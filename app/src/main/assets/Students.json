@@ -1,27 +1,23 @@
 {
-  "etudiant1":
-    {
-      "avatarPath": "",
-      "firstName": "Hugo",
-      "lastName": "FERRY",
-      "email": "hugo.ferry@fou.com",
-      "group": "dev2"
-    },
-    "etudiant2":
-    {
-      "avatarPath": "",
-      "firstName": "Steve",
-      "lastName": "LEZOUK",
-      "email": "steve.lezeau@fou.com",
-      "group": "dev1"
-    },
-    "etudiant3":
-    {
-      "avatarPath": "",
-      "firstName": "Clément",
-      "lastName": "LAFON",
-      "email": "clement.lafon@fou.com",
-      "group": "dev1"
-    }
-
+  "etudiant1": {
+    "avatarPath": "",
+    "firstName": "Hugo",
+    "lastName": "FERRY",
+    "email": "hugo.ferry@fou.com",
+    "group": "dev2"
+  },
+  "etudiant2": {
+    "avatarPath": "",
+    "firstName": "Steve",
+    "lastName": "LEZOUK",
+    "email": "steve.lezeau@fou.com",
+    "group": "dev1"
+  },
+  "etudiant3": {
+    "avatarPath": "",
+    "firstName": "Clément",
+    "lastName": "LAFON",
+    "email": "clement.lafon@fou.com",
+    "group": "dev1"
+  }
 }

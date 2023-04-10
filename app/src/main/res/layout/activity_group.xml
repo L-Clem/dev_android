@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".GroupActivity">
-
-<include
-    layout="@layout/layout_header"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GroupActivity">
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
+    <include
+        layout="@layout/layout_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90px"
-        android:orientation="vertical">
+        android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/etudiant1"
-            style="@style/ButtonMarche"
-            android:layout_width="184dp"
-            android:layout_height="90dp"
-            android:text="Etudiant 1" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/etudiant2"
-            style="@style/ButtonMarche"
-            android:layout_width="184dp"
-            android:layout_height="90dp"
-            android:text="Etudiant 2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90px"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/etudiant3"
-            style="@style/ButtonMarche"
-            android:layout_width="184dp"
-            android:layout_height="90dp"
-            android:text="Etudiant 3" />
+            <Button
+                android:id="@+id/etudiant1"
+                style="@style/ButtonMarche"
+                android:layout_width="184dp"
+                android:layout_height="90dp"
+                android:text="Etudiant 1" />
 
+            <Button
+                android:id="@+id/etudiant2"
+                style="@style/ButtonMarche"
+                android:layout_width="184dp"
+                android:layout_height="90dp"
+                android:text="Etudiant 2" />
 
-    </LinearLayout>
-</ScrollView>
+            <Button
+                android:id="@+id/etudiant3"
+                style="@style/ButtonMarche"
+                android:layout_width="184dp"
+                android:layout_height="90dp"
+                android:text="Etudiant 3" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
