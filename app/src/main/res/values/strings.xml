@@ -7,6 +7,6 @@
     <string name="txt_epsi">EPSI</string>
 
     <string name="txt_info">Infos</string>
-    <string name="epsi.fr"><a href = "http://www.epsi.fr">http://www.epsi.fr</a></string>
+    <string name="epsi.fr"><a href="http://www.epsi.fr">http://www.epsi.fr</a></string>
     <string name="txt_produits">Rayons</string>
 </resources>
