@@ -16,5 +16,7 @@
         android:id="@+id/recyclerViewCategories"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        tools:listitem="@layout/cell_category"
+        />
 </LinearLayout>

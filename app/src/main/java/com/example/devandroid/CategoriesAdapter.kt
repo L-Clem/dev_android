@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+
 
 class CategoriesAdapter(val categories: ArrayList<Category>) :
     RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
@@ -30,14 +32,16 @@ class CategoriesAdapter(val categories: ArrayList<Category>) :
         holder.textViewTitle.id = category.category_id
         holder.textViewTitle.text = category.title
 
-
-        holder.layoutContent.setOnClickListener(View.OnClickListener {
-            Log.e("Epsi", "################# clickkk")
-            val newIntent: Intent =  Intent(holder.layoutContent.context, ProductsActivity::class.java)
-            newIntent.putExtra("category", category.title)
-            holder.layoutContent.context.startActivity(newIntent)
+        holder.layoutContent.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View) {
+                Log.e("Epsi", "################# clickkk")
+                val newIntent: Intent =  Intent(holder.layoutContent.context, ProductsActivity::class.java)
+                newIntent.putExtra("category", category.title)
+                holder.layoutContent.context.startActivity(newIntent)
+            }
         })
-        Log.e("Epsi", "################# click " + holder.layoutContent.hasOnClickListeners())
+
+        Log.e("Epsi", "################# click " + holder.layoutContent)
     }
 
     override fun getItemCount(): Int {
