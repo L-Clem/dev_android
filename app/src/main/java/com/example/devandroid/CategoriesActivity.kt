@@ -1,10 +1,7 @@
 package com.example.devandroid
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import okhttp3.*
@@ -18,7 +15,7 @@ class CategoriesActivity : BaseActivity() {
         showBack()
         setHeaderTitle("Rayons")
 
-        val categories = arrayListOf<Categories>()
+        val categories = arrayListOf<Category>()
 
         val recyclerViewCategories = findViewById<RecyclerView>(R.id.recyclerViewCategories)
         recyclerViewCategories.layoutManager = LinearLayoutManager(this)
@@ -48,7 +45,7 @@ class CategoriesActivity : BaseActivity() {
                     val jsArrayCategories = jsCategories.getJSONArray("items")
                     for (i in 0 until jsArrayCategories.length()) {
                         val js = jsArrayCategories.getJSONObject(i)
-                        val categorie = Categories(
+                        val categorie = Category(
                             js.optInt("category_id", 0),
                             js.optString("title", "Not found"),
                             js.optString("products_url", "Not found")
