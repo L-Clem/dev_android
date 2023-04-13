@@ -41,7 +41,7 @@ class ProductAdapter(val products: ArrayList<Product>) :
         Picasso.get().load(product.picture_url).into(holder.imageViewProduct)
         holder.layoutContent.setOnClickListener(View.OnClickListener {
             val newIntent = Intent(holder.layoutContent.context, ProductDetailsActivity::class.java)
-            newIntent.putExtra("product", product.name)
+            newIntent.putExtra("product", product)
             holder.layoutContent.context.startActivity(newIntent)
         })
     }

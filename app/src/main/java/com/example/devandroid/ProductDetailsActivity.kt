@@ -1,9 +1,9 @@
 package com.example.devandroid
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import com.squareup.picasso.Picasso
 
 class ProductDetailsActivity : BaseActivity() {
 
@@ -11,12 +11,15 @@ class ProductDetailsActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_details)
         showBack()
-        setHeaderTitle(intent.extras?.getString("name"))
+
+        val product = intent.getSerializableExtra("product") as? Product
+        setHeaderTitle("${product?.name}")
 
         val editAvatar = findViewById<ImageView>(R.id.imageViewProduct)
-        editAvatar.setImageResource(R.drawable.logo_marche)
+        Picasso.get().load(product?.picture_url).into(editAvatar)
+
 
         val editDescription = findViewById<TextView>(R.id.textViewProductDescription)
-        editDescription.setText(intent.extras?.getString("description"))
+        editDescription.setText(product?.description)
     }
 }
