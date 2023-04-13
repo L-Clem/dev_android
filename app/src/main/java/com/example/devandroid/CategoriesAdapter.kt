@@ -13,13 +13,13 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.NonDisposableHandle.parent
 
 
-class CategoriesAdapter(val categories: ArrayList<Category>) :
-    RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
+class CategoriesAdapter (private val categories: ArrayList<Category>):RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
+    class ViewHolder(view:View) :RecyclerView.ViewHolder(view){
+        val textViewTitle: TextView = view.findViewById(R.id.textViewTitle)
+        val layoutContent: LinearLayout = view.findViewById(R.id.layoutContentCategoriesItem)
+    }
 
-    override fun onCreateViewHolder(
-        viewGroup: ViewGroup,
-        viewType: Int
-    ): ViewHolder {
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
             .inflate(R.layout.cell_category, viewGroup, false)
         return ViewHolder(view)
@@ -27,27 +27,16 @@ class CategoriesAdapter(val categories: ArrayList<Category>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val category = categories[position]
-        Log.e("DevAI","#######################  "+ category.title)
-        holder.textViewTitle.text = category.title
-        holder.itemView.setOnClickListener {
-            val intent = createIntentForItem(category, holder.itemView.context)
-            holder.itemView.context.startActivity(intent)
-        }
+        holder.textViewTitle.text=category.title
+        holder.layoutContent.setOnClickListener(View.OnClickListener {
+            val newIntent = Intent(holder.layoutContent.context, ProductsActivity::class.java)
+            newIntent.putExtra("category", category)
+            holder.layoutContent.context.startActivity(newIntent)
+        })
     }
 
     override fun getItemCount(): Int {
         return categories.size
-    }
-
-    private fun createIntentForItem(item: Category, context: Context): Intent {
-        val intent = Intent(context, ProductsActivity::class.java)
-        intent.putExtra("category", item.title)
-        return intent
-    }
-
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val layoutContent: LinearLayout = itemView.findViewById<LinearLayout>(R.id.layoutContentCategories)
-        val textViewTitle: TextView = itemView.findViewById<TextView>(R.id.textViewTitle)
     }
 }
 
