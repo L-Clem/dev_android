@@ -1,13 +1,10 @@
 package com.example.devandroid
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import org.json.JSONObject
-import java.io.IOException
-import java.io.InputStream
+
 
 class GroupActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

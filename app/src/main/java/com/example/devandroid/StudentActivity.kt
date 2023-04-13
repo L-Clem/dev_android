@@ -2,9 +2,7 @@ package com.example.devandroid
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Email
 import android.widget.ImageView
 import android.widget.TextView
 import org.json.JSONObject
