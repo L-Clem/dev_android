@@ -3,21 +3,21 @@
     "avatarPath": "",
     "firstName": "Hugo",
     "lastName": "FERRY",
-    "email": "hugo.ferry@fou.com",
+    "email": "hugo.ferry@bateau.fr",
     "group": "dev2"
   },
   "etudiant2": {
     "avatarPath": "",
     "firstName": "Steve",
     "lastName": "LEZEAU",
-    "email": "steve.lezeau@fou.com",
+    "email": "steve.lezeau@beaugosse.bg",
     "group": "dev1"
   },
   "etudiant3": {
     "avatarPath": "",
     "firstName": "Clément",
     "lastName": "LAFON",
-    "email": "clement.lafon@fou.com",
+    "email": "clement.lafon@fou.fo",
     "group": "dev1"
   }
 }
